@@ -1,8 +1,10 @@
 version: '3'
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    build: .
+    image: jenkins-sl-db
     ports:
-    - 8080:8080
+      - 8080:8080
     volumes:
-    - ./jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./jenkins_home:/var/jenkins_home

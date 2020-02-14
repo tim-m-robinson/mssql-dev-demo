@@ -1,5 +1,5 @@
 FROM microsoft/mssql-server-linux:2017-CU12
-ENV SA_PASSWORD Password123
+ENV SA_PASSWORD Change_me!
 ENV ACCEPT_EULA=Y
 
 COPY . /usr/src/app
