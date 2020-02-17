@@ -14,3 +14,6 @@ BEGIN
     RETURN 1
 END;
 GO
+
+EXEC testEmpTable01
+GO
