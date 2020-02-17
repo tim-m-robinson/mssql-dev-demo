@@ -2,11 +2,9 @@ version: "2.1"
 services:
     db-mssql-dev:
         container_name: db-mssql-dev
-        image: microsoft/mssql-server-linux:2017-CU12
+        build: docker/.
         environment:
           - SA_PASSWORD=Change_me!
           - ACCEPT_EULA=Y
-        volumes:
-          - .:/usr/src/app
         ports:
           - 1433:1433

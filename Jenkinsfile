@@ -1,9 +1,12 @@
-//TO-DO
 node {
-    checkout scm 
+    //checkout scm
+    git 'https://github.com/tim-m-robinson/mssql-dev-demo.git'
+    def sl_mssql = null
     
-    stage ('Init') {
-
+    stage('Init') {
+      dir('docker') {
+        sl_mssql = docker.build('sl-dev-mssql:lts')
+      }
     }
 
     stage ('Build') {
